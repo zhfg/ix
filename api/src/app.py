@@ -8,8 +8,10 @@ import time
 
 app = Flask(__name__)
 CORS(app)
-    
-count_healthly = 0
+app.config.update(count_healthly=0)
+print(app.config.get('count_healthly'))
+# global count_healthly
+# count_healthly = 0
 
 @app.route("/project")
 def project():
@@ -52,8 +54,8 @@ def logout():
 
 @app.route("/healthly")
 def healthly():
-    count_healthly += 1
-    if count_healthly % 5 == 0:
+    app.config.update(count_healthly = app.config.get('count_healthly') + 1)
+    if app.config.get('count_healthly') % 5 == 0:
         time.sleep(10)
         return "timeout 10s"
     else:
