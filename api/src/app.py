@@ -55,7 +55,7 @@ def logout():
 @app.route("/healthly")
 def healthly():
     app.config.update(count_healthly = app.config.get('count_healthly') + 1)
-    if app.config.get('count_healthly') % 5 == 0:
+    if app.config.get('count_healthly') % 10 > 5:
         time.sleep(10)
         return "timeout 10s, count = {}".format(app.config.get('count_healthly'))
     else:
