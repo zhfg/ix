@@ -57,9 +57,9 @@ def healthly():
     app.config.update(count_healthly = app.config.get('count_healthly') + 1)
     if app.config.get('count_healthly') % 5 == 0:
         time.sleep(10)
-        return "timeout 10s"
+        return "timeout 10s, count = {}".format(app.config.get('count_healthly'))
     else:
-        return "ok"
+        return "ok, count = {}".format(app.config.get('count_healthly'))
 
 application_view = ApplicationView.as_view("myapplication_view")
 
