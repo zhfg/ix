@@ -1,0 +1,2 @@
+database:
+  connection_string: "mongodb+srv://zhfg:<password>@cluster0.liiw6lj.mongodb.net/?retryWrites=true&w=majority"

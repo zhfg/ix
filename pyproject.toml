@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "repl_nix_ix"
+version = "0.1.0"
+description = ""
+authors = ["Replit user <<>>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+celery = "^5.2.7"
+Flask = "^2.2.2"
+Flask-Cors = "^3.0.10"
+jsonpickle = "^2.2.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
